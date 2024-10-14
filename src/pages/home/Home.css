@@ -1,0 +1,10 @@
+* {
+  margin: 0rem;
+  padding: 0rem;
+}
+
+.home_container {
+  overflow-x: hidden;
+  height: auto;
+  width: 100vw;
+}

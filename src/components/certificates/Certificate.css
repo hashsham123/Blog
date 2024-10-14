@@ -1,0 +1,11 @@
+.main_cards {
+  height: auto;
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+   margin: 0rem auto;
+  margin-bottom: 4rem; 
+}

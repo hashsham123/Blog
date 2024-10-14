@@ -1,0 +1,69 @@
+.main_contact {
+  width: 100%;
+  height: 20rem;
+  margin: 0rem auto;
+  display: flex;
+  background-color: white;
+}
+
+.text_contact {
+  width: 33.33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+  p {
+    width: 74%;
+    text-align: center;
+  }
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    background-position: center;
+  }
+}
+.into_contancts {
+  font-family: "SUSE", sans-serif;
+  font-optical-sizing: auto;
+  text-align: center;
+  font-size: 3rem;
+  width: 95%;
+}
+
+.about_contant {
+  background-color: rgb(208, 208, 208) !important;
+}
+
+.contacts {
+  background-color: #aab1c3;
+  p {
+    font-size: 3vw !important;
+    width: 95%;
+    text-align: center;
+  }
+}
+
+.details_contact {
+  width: 100%;
+  margin: 0rem auto;
+  text-align: left;
+  li {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    gap: 0.5rem;
+    p {
+      width: 45%;
+      font-size: 1rem !important;
+      text-align: left;
+    }
+    img {
+      width: 1.4rem;
+      object-fit: cover;
+    }
+  }
+}
