@@ -8,7 +8,6 @@ import Button from "@mui/material/Button";
 function ExperienceTab() {
   return (
     <div>
-      {" "}
       <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}

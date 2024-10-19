@@ -1,6 +1,7 @@
 .main_app {
   overflow-x: clip;
-  background: linear-gradient(180deg, #606c88, #3f4c6b);
+  /* background: linear-gradient(180deg, #606c88, #3f4c6b); */
+  background-color: #FAFAFA ;
 }
 
 .button_container_app {

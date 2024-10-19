@@ -57,9 +57,11 @@ function Projects() {
               </p>
             </div>
           </div>
-          {/* <p className="title_project">Project Two</p> */}
         </section>
       </div>
+      {/* <div className="donut">
+            <img src="/Donut Shape.png" alt="image" />
+          </div> */}
     </div>
   );
 }

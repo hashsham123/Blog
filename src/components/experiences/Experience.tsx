@@ -54,6 +54,7 @@ function Experience() {
 
   return (
     <div className="main_exp">
+  
       <p className="title_exp" id="experience">
         My Experience
       </p>
@@ -90,7 +91,7 @@ function Experience() {
               <div className="know_landing">
                 <button>Know More</button>
               </div>
-              <img src="/download (1).jpeg" alt="image" />
+              <img src="/download (1).png" alt="image" />
             </div>
           </div>
         </section>
@@ -170,7 +171,7 @@ function Experience() {
                 <button>Know More</button>
               </div>
 
-              <img src="/download.jpeg" alt="image" />
+              <img src="/downloadt.png" alt="image" />
             </div>
           </div>
         </section>

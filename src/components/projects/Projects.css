@@ -15,41 +15,55 @@
 
 .title_project {
   font-size: 3rem;
-  color: white;
+  color: #3f4c6b;
   text-align: center;
 }
 
 .project_section {
+  position: relative;
+  z-index: 1;
   height: 80%;
   width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
   /* margin-top: 2rem; */
-  /* background-color: white; */
+  /* background-color: #FAFAFA; */
   border-radius: 1.5rem;
 }
 
 .project_section2 {
+  position: relative;
+  z-index: 1;
   height: 80%;
   width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 2rem;
-  /* background-color: white; */
+  background-color: #FAFAFA;
   border-radius: 1.5rem;
+}
+
+.donut{
+  position: absolute;
+  width: 90vw;
+  display: flex;
+  justify-content: right;
+  z-index: 0;
 }
 
 .box_project {
   /* background-color: #e8806b; */
-  background-color: white;
+  background-color: #FAFAFA;
   /* background: linear-gradient(135deg, #f8d3c6, #f5a9a1, #f9b5a5, #f7c6c7); */
   width: 64%;
   height: 87%;
   border-radius: 1.5rem;
-  border: 1px solid white;
-  display: flex;
+  border: 1px solid #ccc;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2),
+    -3px -3px 8px rgba(255, 255, 255, 0.5), inset 1px 1px 2px rgba(0, 0, 0, 0.1),
+    inset -1px -1px 2px rgba(255, 255, 255, 0.7);  display: flex;
   /* justify-content: center; */
   align-items: center;
   /* border: 1px solid black; */
@@ -59,7 +73,7 @@
   position: relative;
   /* top: 2rem; */
   right: 2rem;
-  background-color: white;
+  background-color: #FAFAFA;
   height: 88%;
   width: 51%;
   img {
