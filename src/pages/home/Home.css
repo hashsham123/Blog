@@ -4,7 +4,8 @@
 }
 
 .home_container {
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   height: auto;
+  z-index: 1;
   width: 100vw;
 }

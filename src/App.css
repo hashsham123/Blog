@@ -1,7 +1,5 @@
 .main_app {
-  overflow-x: hidden;
   background: linear-gradient(180deg, #606c88, #3f4c6b);
-  /* background: linear-gradient(135deg, #f8d3c6, #f5a9a1, #f9b5a5, #f7c6c7); */
 }
 
 .button_container_app {
