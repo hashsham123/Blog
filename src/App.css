@@ -1,4 +1,5 @@
 .main_app {
+  overflow-x: clip;
   background: linear-gradient(180deg, #606c88, #3f4c6b);
 }
 

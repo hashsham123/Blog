@@ -4,7 +4,7 @@
 }
 
 .home_container {
-  /* overflow-x: hidden; */
+  overflow-x: clip;
   height: auto;
   z-index: 1;
   width: 100vw;

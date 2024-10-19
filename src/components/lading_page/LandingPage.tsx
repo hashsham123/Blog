@@ -28,6 +28,19 @@ const frames = [
 const LandingPage: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [currentFrame, setCurrentFrame] = useState<number>(0);
+  const [imageCache, setImageCache] = useState<HTMLImageElement[]>([]);
+
+  const preloadImages = () => {
+    const cache: HTMLImageElement[] = [];
+    frames.forEach((frame, index) => {
+      const img = new Image();
+      img.src = `/frames/${frame}`;
+      img.onload = () => {
+        cache[index] = img;
+        setImageCache([...cache]); // Update cache as images load
+      };
+    });
+  };
 
   const handleScroll = () => {
     const scrollTop = window.pageYOffset;
@@ -44,31 +57,22 @@ const LandingPage: React.FC = () => {
   };
 
   useEffect(() => {
+    preloadImages();
+  }, []);
+
+  useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas?.getContext("2d");
 
-    if (canvas && ctx) {
+    if (canvas && ctx && imageCache[currentFrame]) {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
 
-      const img = new Image();
-      img.src = `/frames/${frames[currentFrame]}`;
-
-      img.onload = () => {
-        console.log(`Frame ${currentFrame} loaded: ${img.src}`);
-
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-      };
-
-      img.onerror = () => {
-        console.error(`Error loading frame ${currentFrame}: ${img.src}`);
-      };
-    } else {
-      console.error("Canvas or context is not available");
+      const img = imageCache[currentFrame];
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
     }
-  }, [currentFrame]);
+  }, [currentFrame, imageCache]);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
