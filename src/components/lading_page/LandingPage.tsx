@@ -2,27 +2,49 @@ import React, { useEffect, useRef, useState } from "react";
 import "./LandingPage.css";
 
 const frames = [
-  "scene00011.png",
-  "scene00021.png",
-  "scene00031.png",
-  "scene00041.png",
-  "scene00051.png",
-  "scene00061.png",
-  "scene00071.png",
-  "scene00081.png",
-  "scene00091.png",
-  "scene00101.png",
-  "scene00111.png",
-  "scene00121.png",
-  "scene00131.png",
-  "scene00141.png",
-  "scene00151.png",
-  "scene00161.png",
-  "scene00171.png",
-  "scene00181.png",
-  "scene00191.png",
-  "scene00201.png",
-  "scene00211.png",
+  // "frames1/scene00001.png",
+  // "frames1/scene00011.png",
+  // "frames1/scene00021.png",
+  // "frames1/scene00031.png",
+  "frames1/scene00041.png",
+  "frames1/scene00051.png",
+  "frames1/scene00061.png",
+  "frames1/scene00071.png",
+  "frames1/scene00081.png",
+  "frames1/scene00091.png",
+  "frames1/scene00101.png",
+  "frames1/scene00111.png",
+  "frames1/scene00121.png",
+  "frames1/scene00131.png",
+  "frames1/scene00141.png",
+  "frames1/scene00151.png",
+  "frames1/scene00161.png",
+  "frames1/scene00171.png",
+  "frames1/scene00181.png",
+  "frames1/scene00191.png",
+  "frames1/scene00201.png",
+  "frames1/scene00211.png",
+  // "frames/scene00011.png",
+  "frames/scene00021.png",
+  "frames/scene00031.png",
+  "frames/scene00041.png",
+  "frames/scene00051.png",
+  "frames/scene00061.png",
+  "frames/scene00071.png",
+  "frames/scene00081.png",
+  "frames/scene00091.png",
+  "frames/scene00101.png",
+  "frames/scene00111.png",
+  "frames/scene00121.png",
+  "frames/scene00131.png",
+  "frames/scene00141.png",
+  "frames/scene00151.png",
+  "frames/scene00161.png",
+  "frames/scene00171.png",
+  // "frames/scene00181.png",
+  // "frames/scene00191.png",
+  // "frames/scene00201.png",
+  // "frames/scene00211.png",
 ];
 
 const LandingPage: React.FC = () => {
@@ -34,10 +56,10 @@ const LandingPage: React.FC = () => {
     const cache: HTMLImageElement[] = [];
     frames.forEach((frame, index) => {
       const img = new Image();
-      img.src = `/frames/${frame}`;
+      img.src = `/${frame}`;
       img.onload = () => {
         cache[index] = img;
-        setImageCache([...cache]); // Update cache as images load
+        setImageCache([...cache]);
       };
     });
   };
@@ -82,8 +104,20 @@ const LandingPage: React.FC = () => {
   }, []);
 
   return (
-    <div className="main_frame">
-      <canvas className="canvas" ref={canvasRef} />
+    <div>
+      <div className="main_frame">
+        <canvas className="canvas" ref={canvasRef} />
+      </div>
+      <div className="button_canvas">
+        <button>
+          <img
+            src="/downloadIcon.png"
+            alt="download icon"
+            className="animate__animated animate__fadeIn animate__infinite"
+          />
+          <span>Download Resume</span>
+        </button>
+      </div>
     </div>
   );
 };

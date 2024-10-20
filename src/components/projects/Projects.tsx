@@ -59,9 +59,6 @@ function Projects() {
           </div>
         </section>
       </div>
-      {/* <div className="donut">
-            <img src="/Donut Shape.png" alt="image" />
-          </div> */}
     </div>
   );
 }

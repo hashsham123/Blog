@@ -14,17 +14,17 @@
 }
 
 .logo_container_nav {
-  height: 3.5rem;
-  background-color: #3f4c6b;
-
-  width: 10rem;
+  height: 4rem;
+  width: 15rem;
   img {
-    height: 100%;
     width: 100%;
-    object-fit: contain;
-    background-position: center;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
   }
 }
+
 
 .button_container_nav {
   height: 100%;

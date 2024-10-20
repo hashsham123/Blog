@@ -71,7 +71,7 @@ export default function Navbar(props: Props) {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { xs: "block", sm: "none" } }} // Show on small screens
+            sx={{ mr: 2, display: { xs: "block", sm: "none" } }} 
           >
             <MenuIcon />
           </IconButton>
@@ -81,7 +81,7 @@ export default function Navbar(props: Props) {
             sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
           >
             <div className="logo_container_nav">
-              <img src="/logo.png" alt="image" />
+              <img src="/Hash.png" alt="image" />
             </div>
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
