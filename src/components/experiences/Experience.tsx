@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import "./Experience.css";
-import "animate.css";
+import "../../styles/Experience.css";
 
 type RefObject = HTMLDivElement | null;
 

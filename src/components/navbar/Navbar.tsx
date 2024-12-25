@@ -14,7 +14,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { Link } from "react-scroll";
-import "./Navbar.css";
+import "../../styles/Navbar.css";
 import DownloadIcon from "@mui/icons-material/Download";
 
 interface Props {
@@ -48,7 +48,7 @@ export default function Navbar(props: Props) {
                 duration={500}
                 offset={-50}
               >
-                <ListItemText primary={item} />
+                <ListItemText className="folio-navbar-text" primary={item} />
               </Link>
             </ListItemButton>
           </ListItem>
@@ -71,7 +71,7 @@ export default function Navbar(props: Props) {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { xs: "block", sm: "none" } }} 
+            sx={{ mr: 2, display: { xs: "block", sm: "none" } }}
           >
             <MenuIcon />
           </IconButton>

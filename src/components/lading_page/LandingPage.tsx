@@ -1,50 +1,40 @@
 import React, { useEffect, useRef, useState } from "react";
-import "./LandingPage.css";
+import "../../styles/LandingPage.css";
 
 const frames = [
-  // "frames1/scene00001.png",
-  // "frames1/scene00011.png",
-  // "frames1/scene00021.png",
-  // "frames1/scene00031.png",
-  "frames1/scene00041.png",
-  "frames1/scene00051.png",
-  "frames1/scene00061.png",
-  "frames1/scene00071.png",
-  "frames1/scene00081.png",
-  "frames1/scene00091.png",
-  "frames1/scene00101.png",
-  "frames1/scene00111.png",
-  "frames1/scene00121.png",
-  "frames1/scene00131.png",
-  "frames1/scene00141.png",
-  "frames1/scene00151.png",
-  "frames1/scene00161.png",
-  "frames1/scene00171.png",
-  "frames1/scene00181.png",
-  "frames1/scene00191.png",
-  "frames1/scene00201.png",
-  "frames1/scene00211.png",
-  // "frames/scene00011.png",
+  "frames/scene00010.png",
+  "frames/scene00011.png",
+  "frames/scene00012.png",
+  "frames/scene00013.png",
+  "frames/scene00014.png",
+  "frames/scene00015.png",
+  "frames/scene00016.png",
+  "frames/scene00017.png",
+  "frames/scene00018.png",
+  "frames/scene00019.png",
+  "frames/scene00020.png",
   "frames/scene00021.png",
+  "frames/scene00022.png",
+  "frames/scene00023.png",
+  "frames/scene00024.png",
+  "frames/scene00025.png",
+  "frames/scene00026.png",
+  "frames/scene00027.png",
+  "frames/scene00028.png",
+  "frames/scene00029.png",
+  "frames/scene00030.png",
   "frames/scene00031.png",
+  "frames/scene00032.png",
+  "frames/scene00033.png",
+  "frames/scene00034.png",
+  "frames/scene00035.png",
+  "frames/scene00036.png",
+  "frames/scene00037.png",
+  "frames/scene00038.png",
+  "frames/scene00039.png",
+  "frames/scene00040.png",
   "frames/scene00041.png",
-  "frames/scene00051.png",
-  "frames/scene00061.png",
-  "frames/scene00071.png",
-  "frames/scene00081.png",
-  "frames/scene00091.png",
-  "frames/scene00101.png",
-  "frames/scene00111.png",
-  "frames/scene00121.png",
-  "frames/scene00131.png",
-  "frames/scene00141.png",
-  "frames/scene00151.png",
-  "frames/scene00161.png",
-  "frames/scene00171.png",
-  // "frames/scene00181.png",
-  // "frames/scene00191.png",
-  // "frames/scene00201.png",
-  // "frames/scene00211.png",
+  "frames/scene00042.png",
 ];
 
 const LandingPage: React.FC = () => {
@@ -107,16 +97,6 @@ const LandingPage: React.FC = () => {
     <div>
       <div className="main_frame">
         <canvas className="canvas" ref={canvasRef} />
-      </div>
-      <div className="button_canvas">
-        <button>
-          <img
-            src="/downloadIcon.png"
-            alt="download icon"
-            className="animate__animated animate__fadeIn animate__infinite"
-          />
-          <span>Download Resume</span>
-        </button>
       </div>
     </div>
   );

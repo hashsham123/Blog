@@ -1,0 +1,40 @@
+@media (max-width: 851px) {
+  .MuiToolbar-root {
+    padding: 1rem !important;
+  }
+}
+
+
+.MuiButton-text {
+  color: rgb(90, 90, 90) !important;
+}
+
+.MuiButton-text {
+  color: rgb(90, 90, 90) !important;
+}
+.folio-navbar-text{
+  background-color: red !important;
+}
+
+.logo_container_nav {
+  height: 4rem;
+  width: 15rem;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+}
+
+
+.button_container_nav {
+  height: 100%;
+  width: 20%;
+}
+
+.button_nav {
+  height: 4rem;
+  width: 7rem;
+}

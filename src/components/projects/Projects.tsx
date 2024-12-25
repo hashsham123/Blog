@@ -1,4 +1,4 @@
-import "./Projects.css";
+import "../../styles/Projects.css";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 
 function Projects() {
@@ -7,7 +7,6 @@ function Projects() {
       <div className="content_project">
         <p className="title_project">My Projects</p>
         <section className="project_section">
-          {/* <p className="title_project" style={{marginRight: '10%', fontSize: '4rem'}}>Project</p> */}
           <div className="box_project">
             <div className="left_project">
               <img
@@ -33,7 +32,7 @@ function Projects() {
           </div>
         </section>
 
-        <section className="project_section2">
+        <section className="project_section project_section2">
           <div className="box_project">
             <div className="left_project">
               <img
