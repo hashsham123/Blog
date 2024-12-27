@@ -2,7 +2,7 @@ import Experience from "../../components/experiences/Experience";
 import LandingPage from "../../components/lading_page/LandingPage";
 import Projects from "../../components/projects/Projects";
 import Certificate from "../../components/certificates/Certificate";
-import "../../styles/Home.css";
+import "../../styles/Home.scss";
 
 function Home() {
   return (

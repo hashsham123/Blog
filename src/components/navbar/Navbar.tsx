@@ -14,7 +14,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { Link } from "react-scroll";
-import "../../styles/Navbar.css";
+import "../../styles/Navbar.scss";
 import DownloadIcon from "@mui/icons-material/Download";
 
 interface Props {
@@ -96,7 +96,7 @@ export default function Navbar(props: Props) {
                 <Button sx={{ color: "#fff" }}>{item}</Button>
               </Link>
             ))}
-            <Button variant="contained" color="success">
+            <Button className="port-nav-button" variant="contained">
               <DownloadIcon /> Resume
             </Button>
           </Box>

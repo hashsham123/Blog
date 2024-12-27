@@ -29,6 +29,10 @@
   background-color: #e0e0e0;
   align-items: center;
   border-radius: 1.5rem;
+  @media (max-width: 740px) {
+    width: 100%;
+    background-color: transparent;
+  }
 }
 
 .project_section2 {
@@ -36,7 +40,7 @@
   border-radius: 1.5rem;
 }
 
-.donut{
+.donut {
   position: absolute;
   width: 90vw;
   display: flex;
@@ -45,24 +49,25 @@
 }
 
 .box_project {
-  /* background-color: #e8806b; */
   background-color: #ffffff;
-  /* background: linear-gradient(135deg, #f8d3c6, #f5a9a1, #f9b5a5, #f7c6c7); */
   width: 74%;
   height: 87%;
   border-radius: 1.5rem;
   border: 1px solid #ccc;
   box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2),
     -3px -3px 8px rgba(255, 255, 255, 0.5), inset 1px 1px 2px rgba(0, 0, 0, 0.1),
-    inset -1px -1px 2px rgba(255, 255, 255, 0.7);  display: flex;
-  /* justify-content: center; */
+    inset -1px -1px 2px rgba(255, 255, 255, 0.7);
+  display: flex;
   align-items: center;
-  /* border: 1px solid black; */
+
+  @media (max-width: 740px) {
+    width: 95%;
+    height: 92%;
+  }
 }
 
 .left_project {
   position: relative;
-  /* top: 2rem; */
   right: 2rem;
   background-color: #ffffff;
   height: 88%;

@@ -2,7 +2,7 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import "../../styles/Certificate.css";
+import "../../styles/Certificate.scss";
 
 export default function MediaCard() {
   return (
@@ -18,16 +18,17 @@ export default function MediaCard() {
         <Card sx={{ maxWidth: 345 }}>
           <CardMedia
             sx={{ height: 140 }}
-            image="https://cdn-ghkoj.nitrocdn.com/kjYfdEBKRwdYwvHQyjaYBdTGFpFGjqYW/assets/images/optimized/rev-39d8e95/sertifier.com/blog/wp-content/uploads/2020/10/certificate-text-samples.jpg"
+            image="certificates/devtown.png"
             title="green iguana"
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-              Lizard
+              Devtown Training
             </Typography>
             <Typography variant="body2" sx={{ color: "text.secondary" }}>
-              Lizards are a widespread group of squamate reptiles, with over
-              6,000 species, ranging across all continents except Antarctica
+              Gained in-depth knowledge and practical experience in MongoDB,
+              Express.js, React.js, and Node.js, specializing in building
+              full-stack web applications.
             </Typography>
           </CardContent>
         </Card>
@@ -35,16 +36,17 @@ export default function MediaCard() {
         <Card sx={{ maxWidth: 345 }}>
           <CardMedia
             sx={{ height: 140 }}
-            image="https://cdn-ghkoj.nitrocdn.com/kjYfdEBKRwdYwvHQyjaYBdTGFpFGjqYW/assets/images/optimized/rev-39d8e95/sertifier.com/blog/wp-content/uploads/2020/10/certificate-text-samples.jpg"
+            image="certificates/competition.png"
             title="green iguana"
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-              Lizard
+              Codespire Competition
             </Typography>
             <Typography variant="body2" sx={{ color: "text.secondary" }}>
-              Lizards are a widespread group of squamate reptiles, with over
-              6,000 species, ranging across all continents except Antarctica
+              Participated in Codespire 2023 and secured 30th rank out of 315
+              students, demonstrating strong problem-solving and coding skills
+              in a competitive environment.
             </Typography>
           </CardContent>
         </Card>
@@ -52,16 +54,17 @@ export default function MediaCard() {
         <Card sx={{ maxWidth: 345 }}>
           <CardMedia
             sx={{ height: 140 }}
-            image="https://cdn-ghkoj.nitrocdn.com/kjYfdEBKRwdYwvHQyjaYBdTGFpFGjqYW/assets/images/optimized/rev-39d8e95/sertifier.com/blog/wp-content/uploads/2020/10/certificate-text-samples.jpg"
+            image="certificates/persistent.png"
             title="green iguana"
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-              Lizard
+              Persistent Training
             </Typography>
             <Typography variant="body2" sx={{ color: "text.secondary" }}>
-              Lizards are a widespread group of squamate reptiles, with over
-              6,000 species, ranging across all continents except Antarctica
+              Completed the Persistent Martial Intern Program, gaining training
+              in key software engineering subjects like Operating Systems,
+              Object-Oriented Programming (OOP).
             </Typography>
           </CardContent>
         </Card>
@@ -69,16 +72,17 @@ export default function MediaCard() {
         <Card sx={{ maxWidth: 345 }}>
           <CardMedia
             sx={{ height: 140 }}
-            image="https://cdn-ghkoj.nitrocdn.com/kjYfdEBKRwdYwvHQyjaYBdTGFpFGjqYW/assets/images/optimized/rev-39d8e95/sertifier.com/blog/wp-content/uploads/2020/10/certificate-text-samples.jpg"
+            image="certificates/front-end-meta.png"
             title="green iguana"
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-              Lizard
+              Meta Frontend Training
             </Typography>
             <Typography variant="body2" sx={{ color: "text.secondary" }}>
-              Lizards are a widespread group of squamate reptiles, with over
-              6,000 species, ranging across all continents except Antarctica
+              Completed Meta Frontend Training, gaining expertise in HTML, CSS,
+              JavaScript, React, and modern web development practices for
+              building responsive applications.
             </Typography>
           </CardContent>
         </Card>
@@ -86,16 +90,17 @@ export default function MediaCard() {
         <Card sx={{ maxWidth: 345 }}>
           <CardMedia
             sx={{ height: 140 }}
-            image="https://cdn-ghkoj.nitrocdn.com/kjYfdEBKRwdYwvHQyjaYBdTGFpFGjqYW/assets/images/optimized/rev-39d8e95/sertifier.com/blog/wp-content/uploads/2020/10/certificate-text-samples.jpg"
+            image="certificates/ibm-os.png"
             title="green iguana"
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-              Lizard
+              IBM OS Training
             </Typography>
             <Typography variant="body2" sx={{ color: "text.secondary" }}>
-              Lizards are a widespread group of squamate reptiles, with over
-              6,000 species, ranging across all continents except Antarctica
+              Completed IBM OS Training, gaining hands-on experience with
+              operating systems, enhancing knowledge in system administration
+              and management.
             </Typography>
           </CardContent>
         </Card>
@@ -103,16 +108,17 @@ export default function MediaCard() {
         <Card sx={{ maxWidth: 345 }}>
           <CardMedia
             sx={{ height: 140 }}
-            image="https://cdn-ghkoj.nitrocdn.com/kjYfdEBKRwdYwvHQyjaYBdTGFpFGjqYW/assets/images/optimized/rev-39d8e95/sertifier.com/blog/wp-content/uploads/2020/10/certificate-text-samples.jpg"
+            image="certificates/iit-html.png"
             title="green iguana"
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-              Lizard
+              HTML Certified by IIT
             </Typography>
             <Typography variant="body2" sx={{ color: "text.secondary" }}>
-              Lizards are a widespread group of squamate reptiles, with over
-              6,000 species, ranging across all continents except Antarctica
+              Received HTML certification from IIT, demonstrating proficiency in
+              web development, including structure, semantics, and best
+              practices for building websites.
             </Typography>
           </CardContent>
         </Card>

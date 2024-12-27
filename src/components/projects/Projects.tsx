@@ -1,4 +1,4 @@
-import "../../styles/Projects.css";
+import "../../styles/Projects.scss";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 
 function Projects() {
@@ -20,13 +20,14 @@ function Projects() {
                 <MoreHorizIcon />
               </p>
               <p className="para_project">
-                A full stack clone made yousing MERN stack, firebase
-                <p style={{ fontSize: "0.9rem" }}>6 min read</p>
+                A full stack website made using MERN stack{" "}
+                <p style={{ fontSize: "0.9rem" }}>30 sec read</p>
               </p>
               <p className="desc_project">
-                A full-stack clone using the MERN stack (MongoDB, Express,
-                React, Node.js) and Firebase for authentication and real-time
-                data.
+                Developed a full-stack YouTube clone using React.js, Node.js,
+                and MongoDB Atlas. Utilized Redux Toolkit, React Router,
+                Material UI, JWT, and Mongoose for robust front-end and back-end
+                functionality.
               </p>
             </div>
           </div>
@@ -42,17 +43,17 @@ function Projects() {
             </div>
             <div className="right_project">
               <p className="name_project">
-                Youtube-Clone
-                <MoreHorizIcon />
+                HashSocial <MoreHorizIcon />
               </p>
               <p className="para_project">
-                A full stack clone made yousing MERN stack, firebase
-                <p style={{ fontSize: "0.9rem" }}>6 min read</p>
+                A Social Media website made using MERN stack
+                <p style={{ fontSize: "0.9rem" }}>30 sec read</p>
               </p>
               <p className="desc_project">
-                A full-stack clone using the MERN stack (MongoDB, Express,
-                React, Node.js) and Firebase for authentication and real-time
-                data.
+                Built HashSocial, a social media website using React.js and
+                Node.js. Implemented Context API, React Router, Material UI, and
+                MongoDB Atlas with Mongoose for seamless functionality and data
+                management.
               </p>
             </div>
           </div>

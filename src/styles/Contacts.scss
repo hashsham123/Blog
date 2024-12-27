@@ -4,6 +4,9 @@
   margin: 0rem auto;
   display: flex;
   background-color: white;
+  @media (max-width: 740px) {
+    flex-direction: column;
+  }
 }
 
 .text_contact {
@@ -23,6 +26,19 @@
     object-fit: cover;
     background-position: center;
   }
+  @media (max-width: 740px) {
+    width: 100%;
+    p {
+      width: 90%;
+      text-align: left;
+    }
+  }
+  @media (max-width: 1100px) {
+    p {
+      width: 90%;
+      text-align: left;
+    }
+  }
 }
 .into_contancts {
   font-family: "SUSE", sans-serif;
@@ -39,9 +55,15 @@
 .contacts {
   background-color: #aab1c3;
   p {
-    font-size: 3vw !important;
+    font-size: 3rem !important;
     width: 95%;
     text-align: center;
+  }
+  @media (max-width: 740px) {
+    p {
+      width: 90%;
+      text-align: left;
+    }
   }
 }
 
@@ -64,6 +86,14 @@
     img {
       width: 1.4rem;
       object-fit: cover;
+    }
+  }
+  @media (max-width: 740px) {
+    li {
+      p {
+        width: 70%;
+        text-align: left;
+      }
     }
   }
 }

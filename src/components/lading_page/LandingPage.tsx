@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import "../../styles/LandingPage.css";
+import "../../styles/LandingPage.scss";
 
 const frames = [
   "frames/scene00010.png",
