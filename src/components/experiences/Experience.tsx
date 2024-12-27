@@ -1,11 +1,28 @@
 import { useEffect, useRef, useState } from "react";
 import "../../styles/Experience.scss";
+import Typography from "@mui/material/Typography";
+import Modal from "@mui/material/Modal";
+import Box from "@mui/material/Box";
 
 type RefObject = HTMLDivElement | null;
 
+const style = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: 400,
+  bgcolor: "background.paper",
+  border: "2px solid #000",
+  boxShadow: 24,
+  p: 4,
+};
+
 function Experience() {
   const [visibleStates, setVisibleStates] = useState<boolean[]>([]);
-
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
   const elementRefs = useRef<RefObject[]>([]);
 
   const handleIntersection = (
@@ -66,7 +83,28 @@ function Experience() {
           >
             <div className="text_container_exp">
               <p className="title_text_exp">
-                worked as a Full Stack Developer, <a href="">Know More</a>
+                worked as a Full Stack Developer,{" "}
+                <span onClick={handleOpen}>Know More</span>
+                <Modal
+                  open={open}
+                  onClose={handleClose}
+                  aria-labelledby="modal-modal-title"
+                  aria-describedby="modal-modal-description"
+                >
+                  <Box sx={style}>
+                    <Typography
+                      id="modal-modal-title"
+                      variant="h6"
+                      component="h2"
+                    >
+                      Text in a modal
+                    </Typography>
+                    <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                      Duis mollis, est non commodo luctus, nisi erat porttitor
+                      ligula.
+                    </Typography>
+                  </Box>
+                </Modal>
               </p>
               <p>
                 Worked onsite at CDN Solutions, Indore, designing responsive
@@ -102,10 +140,6 @@ function Experience() {
                 visibleStates[2] ? "animate__animated animate__backInLeft" : ""
               }`}
             >
-              <div className="know_landing">
-                <button>Know More</button>
-              </div>
-
               <img
                 src="https://mavoix.in/_next/image?url=%2Fassets%2FMavoix_Logo-removebg-preview.png&w=256&q=75"
                 alt="image"
@@ -122,7 +156,27 @@ function Experience() {
             <div className="text_container_exp">
               <p className="title_text_exp">
                 worked as a Full Stack Developer Intern,{" "}
-                <a href="">Know More</a>
+                <span onClick={handleOpen}>Know More</span>
+                <Modal
+                  open={open}
+                  onClose={handleClose}
+                  aria-labelledby="modal-modal-title"
+                  aria-describedby="modal-modal-description"
+                >
+                  <Box sx={style}>
+                    <Typography
+                      id="modal-modal-title"
+                      variant="h6"
+                      component="h2"
+                    >
+                      Text in a modal
+                    </Typography>
+                    <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                      Duis mollis, est non commodo luctus, nisi erat porttitor
+                      ligula.
+                    </Typography>
+                  </Box>
+                </Modal>
               </p>
               <p>
                 Designed and developed the product website UI/UX with React.js,
@@ -147,7 +201,28 @@ function Experience() {
           >
             <div className="text_container_exp">
               <p className="title_text_exp">
-                worked as a Node.js Developer Intern, <a href="">Know More</a>
+                worked as a Node.js Developer Intern,{" "}
+                <span onClick={handleOpen}>Know More</span>
+                <Modal
+                  open={open}
+                  onClose={handleClose}
+                  aria-labelledby="modal-modal-title"
+                  aria-describedby="modal-modal-description"
+                >
+                  <Box sx={style}>
+                    <Typography
+                      id="modal-modal-title"
+                      variant="h6"
+                      component="h2"
+                    >
+                      Text in a modal
+                    </Typography>
+                    <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                      Duis mollis, est non commodo luctus, nisi erat porttitor
+                      ligula.
+                    </Typography>
+                  </Box>
+                </Modal>
               </p>
               <p>
                 Created and updated APIs, ensuring efficient functionality and
