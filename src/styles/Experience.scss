@@ -1,6 +1,9 @@
 .main_exp {
   height: auto;
   width: 100vw;
+  @media (max-width: 740px) {
+    display: none;
+  }
 }
 
 .title_exp {
@@ -31,11 +34,6 @@
   width: 80%;
   background-color: #ffffff;
   border-radius: 1.5rem;
-
-  @media (max-width: 740px) {
-    flex-direction: column;
-    width: 90%;
-  }
 }
 
 .box_text_exp {
@@ -45,9 +43,6 @@
   display: flex;
   justify-content: end;
   align-items: center;
-  @media (max-width: 740px) {
-    width: 100%;
-  }
 }
 
 .left_exp {
