@@ -16,6 +16,7 @@ import Button from "@mui/material/Button";
 import { Link } from "react-scroll";
 import "../../styles/Navbar.scss";
 import DownloadIcon from "@mui/icons-material/Download";
+import Resume from "/File/HashshamKhan_Resume_02-2.pdf";
 
 interface Props {
   window?: () => Window;
@@ -39,7 +40,10 @@ export default function Navbar(props: Props) {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center", height: "1.5rem" }}>
+    <Box
+      onClick={handleDrawerToggle}
+      sx={{ textAlign: "center", height: "1.5rem" }}
+    >
       <Typography variant="h6" sx={{ my: 2 }}>
         <img className="port-responsive-logo" src="/logo.png" alt="image" />
       </Typography>
@@ -60,9 +64,11 @@ export default function Navbar(props: Props) {
           </ListItem>
         ))}
       </List>
-      <Button className="port-nav-button" variant="contained">
-        <DownloadIcon /> Resume
-      </Button>{" "}
+      <a href={Resume} download="Hashsham-Khan-Resume" target="_blank">
+        <Button className="port-nav-button" variant="contained">
+          <DownloadIcon /> Resume
+        </Button>
+      </a>
     </Box>
   );
 
@@ -104,9 +110,11 @@ export default function Navbar(props: Props) {
                 <Button sx={{ color: "#fff" }}>{item}</Button>
               </Link>
             ))}
-            <Button className="port-nav-button" variant="contained">
-              <DownloadIcon /> Resume
-            </Button>
+            <a href={Resume} download="Hashsham-Khan-Resume" target="_blank">
+              <Button className="port-nav-button" variant="contained">
+                <DownloadIcon /> Resume
+              </Button>
+            </a>
           </Box>
         </Toolbar>
       </AppBar>

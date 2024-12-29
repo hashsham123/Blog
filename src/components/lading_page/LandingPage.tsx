@@ -6,6 +6,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const frames = [
+  "frames/scene00011.png",
+  "frames/scene00012.png",
   "frames/scene00013.png",
   "frames/scene00014.png",
   "frames/scene00015.png",
@@ -36,61 +38,6 @@ const frames = [
   "frames/scene00040.png",
   "frames/scene00041.png",
   "frames/scene00042.png",
-  "frames/scene00043.png",
-  "frames/scene00044.png",
-  "frames/scene00045.png",
-  "frames/scene00046.png",
-  "frames/scene00047.png",
-  "frames/scene00048.png",
-  "frames/scene00049.png",
-  "frames/scene00050.png",
-  "frames/scene00051.png",
-  "frames/scene00052.png",
-  "frames/scene00053.png",
-  "frames/scene00054.png",
-  "frames/scene00055.png",
-  "frames/scene00056.png",
-  "frames/scene00057.png",
-  "frames/scene00058.png",
-  "frames/scene00059.png",
-  "frames/scene00060.png",
-  "frames/scene00061.png",
-  "frames/scene00062.png",
-  "frames/scene00063.png",
-  "frames/scene00064.png",
-  "frames/scene00065.png",
-  "frames/scene00066.png",
-  "frames/scene00067.png",
-  "frames/scene00068.png",
-  "frames/scene00069.png",
-  "frames/scene00070.png",
-  "frames/scene00071.png",
-  "frames/scene00072.png",
-  "frames/scene00073.png",
-  "frames/scene00074.png",
-  "frames/scene00075.png",
-  "frames/scene00076.png",
-  "frames/scene00077.png",
-  "frames/scene00078.png",
-  "frames/scene00079.png",
-  "frames/scene00080.png",
-  "frames/scene00081.png",
-  "frames/scene00082.png",
-  "frames/scene00083.png",
-  "frames/scene00084.png",
-  "frames/scene00085.png",
-  "frames/scene00086.png",
-  "frames/scene00087.png",
-  "frames/scene00088.png",
-  "frames/scene00089.png",
-  "frames/scene00090.png",
-  "frames/scene00091.png",
-  "frames/scene00092.png",
-  "frames/scene00093.png",
-  "frames/scene00094.png",
-  "frames/scene00095.png",
-  "frames/scene00096.png",
-  "frames/scene00097.png",
 ];
 
 const LandingPage: React.FC = () => {
@@ -98,12 +45,18 @@ const LandingPage: React.FC = () => {
   const imageCache = useRef<Map<number, HTMLImageElement>>(new Map());
   const animationFrame = useRef<number>(0);
 
+  // Preload images and store them in a cache
   const preloadImages = () => {
     frames.forEach((frame, index) => {
       const img = new Image();
       img.src = `/${frame}`;
       img.onload = () => {
         imageCache.current.set(index, img);
+
+        // Render the first frame once it's loaded
+        if (index === 0) {
+          renderFrame(0);
+        }
       };
     });
   };
@@ -152,7 +105,7 @@ const LandingPage: React.FC = () => {
 
   return (
     <div>
-      <div className="main_frame" style={{ height: "900vh" }}>
+      <div className="main_frame" style={{ height: "700vh" }}>
         <canvas className="canvas" ref={canvasRef} />
       </div>
     </div>
