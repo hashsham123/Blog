@@ -1,3 +1,10 @@
+.main_frames {
+  display: block;
+  @media (max-width: 700px) {
+    display: none;
+  }
+}
+
 .main_frame {
   z-index: 0;
   position: relative;

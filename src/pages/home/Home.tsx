@@ -5,6 +5,7 @@ import Projects from "../../components/projects/Projects";
 import Certificate from "../../components/certificates/Certificate";
 import AboutMe from "../../components/aboutMe/AboutMe";
 import "../../styles/Home.scss";
+import LadingPagePhones from "../../components/lading_page/LadingPagePhones";
 
 function Home() {
   const [isFixed, setIsFixed] = useState(false);
@@ -30,6 +31,7 @@ function Home() {
           top: isFixed ? "0" : undefined,
         }}
       >
+        <LadingPagePhones/>
         <LandingPage />
       </div>
       <div

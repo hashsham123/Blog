@@ -1,43 +1,59 @@
 import React, { useEffect, useRef } from "react";
-import "../../styles/LandingPage.scss";
+import "../../styles/LadingPagePhones.scss";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const frames = [
-  "frames/scene00011.png",
-  "frames/scene00012.png",
-  "frames/scene00013.png",
-  "frames/scene00014.png",
-  "frames/scene00015.png",
-  "frames/scene00016.png",
-  "frames/scene00017.png",
-  "frames/scene00018.png",
-  "frames/scene00019.png",
-  "frames/scene00020.png",
-  "frames/scene00021.png",
-  "frames/scene00022.png",
-  "frames/scene00023.png",
-  "frames/scene00024.png",
-  "frames/scene00025.png",
-  "frames/scene00026.png",
-  "frames/scene00027.png",
-  "frames/scene00028.png",
-  "frames/scene00029.png",
-  "frames/scene00030.png",
-  "frames/scene00031.png",
-  "frames/scene00032.png",
-  "frames/scene00033.png",
-  "frames/scene00034.png",
-  "frames/scene00035.png",
-  "frames/scene00036.png",
-  "frames/scene00037.png",
-  "frames/scene00038.png",
-  "frames/scene00039.png",
-  "frames/scene00040.png",
-  "frames/scene00041.png",
-  "frames/scene00042.png",
+  "frames2/scene00006.png",
+  "frames2/scene00007.png",
+  "frames2/scene00008.png",
+  "frames2/scene00009.png",
+  "frames2/scene00010.png",
+  "frames2/scene00011.png",
+  "frames2/scene00012.png",
+  "frames2/scene00013.png",
+  "frames2/scene00014.png",
+  "frames2/scene00015.png",
+  "frames2/scene00016.png",
+  "frames2/scene00017.png",
+  "frames2/scene00018.png",
+  "frames2/scene00019.png",
+  "frames2/scene00020.png",
+  "frames2/scene00021.png",
+  "frames2/scene00022.png",
+  "frames2/scene00023.png",
+  "frames2/scene00024.png",
+  "frames2/scene00025.png",
+  "frames2/scene00026.png",
+  "frames2/scene00027.png",
+  "frames2/scene00028.png",
+  "frames2/scene00029.png",
+  "frames2/scene00030.png",
+  "frames2/scene00031.png",
+  "frames2/scene00032.png",
+  "frames2/scene00033.png",
+  "frames2/scene00034.png",
+  "frames2/scene00035.png",
+  "frames2/scene00036.png",
+  "frames2/scene00037.png",
+  "frames2/scene00038.png",
+  "frames2/scene00039.png",
+  "frames2/scene00040.png",
+  "frames2/scene00041.png",
+  "frames2/scene00042.png",
+  "frames2/scene00043.png",
+  "frames2/scene00044.png",
+  "frames2/scene00045.png",
+  "frames2/scene00046.png",
+  "frames2/scene00047.png",
+  "frames2/scene00048.png",
+  "frames2/scene00049.png",
+  "frames2/scene00050.png",
+  "frames2/scene00051.png",
+  "frames2/scene00052.png",
+  "frames2/scene00053.png",
 ];
 
 const LandingPage: React.FC = () => {
@@ -84,7 +100,7 @@ const LandingPage: React.FC = () => {
       current: totalFrames,
       ease: "none",
       scrollTrigger: {
-        trigger: ".main_frame",
+        trigger: ".main_frame-phone",
         start: "top top",
         end: "bottom bottom",
         scrub: 1,
@@ -104,8 +120,8 @@ const LandingPage: React.FC = () => {
   }, []);
 
   return (
-    <div className="main_frames">
-      <div className="main_frame" style={{ height: "700vh" }}>
+    <div className="main_frames-phone">
+      <div className="main_frame-phone" style={{ height: "700vh" }}>
         <canvas className="canvas" ref={canvasRef} />
       </div>
     </div>
