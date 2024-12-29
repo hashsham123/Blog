@@ -17,15 +17,15 @@ function Contacts() {
         </p>
         <ul className="details_contact">
           <li>
-            <img src="location.png" alt="icon" />
+            <img src="front-end-programming.png" alt="icon" />
             <p>Front-end Development</p>
           </li>
           <li>
-            <img src="location.png" alt="icon" />
+            <img src="api.png" alt="icon" />
             <p>Back-end Development</p>
           </li>
           <li>
-            <img src="location.png" alt="icon" />
+            <img src="database.png" alt="icon" />
             <p>Schema Design</p>
           </li>
         </ul>

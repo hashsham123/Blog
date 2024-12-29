@@ -1,0 +1,128 @@
+#contact {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  text-align: center;
+  padding: 1rem 0;
+  background-color: #fafafa;
+  input:focus {
+    outline: none;
+    border: 2px solid #3f4c6b;
+  }
+
+  textarea:focus {
+    outline: none;
+    border: 2px solid #3f4c6b;
+  }
+}
+
+.contactPageTitle {
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #3f4c6b;
+}
+
+.contactDesc {
+  padding: 1rem;
+  font-size: medium;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  color: rgb(90, 90, 90);
+}
+
+.contactForm {
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90vw;
+  max-width: 49rem;
+}
+
+.name,
+.email,
+.msg {
+  font-size: 1rem;
+  width: 100%;
+  max-width: 40rem;
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  color: rgb(90, 90, 90);
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-weight: 400;
+}
+
+.name,
+.email {
+  height: 3rem;
+}
+
+.name::placeholder,
+.email::placeholder,
+.msg::placeholder {
+  font-size: 0.9rem !important;
+  color: rgb(90, 90, 90);
+  opacity: 0.8;
+}
+
+.msg {
+  resize: none;
+  font-family: "Roboto", "Arial", sans-serif !important;
+}
+
+.submitBtn {
+  background: #3f4c6b;
+  border: none;
+  color: #ffffff;
+  border-radius: 0.5rem;
+  margin: 1rem;
+  height: 2.5rem;
+  width: 6rem;
+  font-size: 0.9rem;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.link {
+  object-fit: cover;
+  height: 3rem;
+  width: 3rem;
+  margin: 0 0.75rem;
+}
+.Linked {
+  object-fit: cover;
+  height: 3rem;
+  width: 3rem;
+  margin: 0 0.75rem;
+}
+
+.error {
+  color: red;
+  font-size: 0.8rem;
+  font-weight: 400;
+  width: 81%;
+  margin-bottom: 1rem;
+  display: flex;
+}
+
+
+.port-email-button {
+    background-color: #3f4c6b !important;
+    color: #ffffff !important;
+    width: 8rem;
+  }

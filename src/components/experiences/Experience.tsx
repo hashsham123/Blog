@@ -11,7 +11,8 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 400,
+  width: 600,
+  height: 300,
   bgcolor: "background.paper",
   border: "2px solid #000",
   boxShadow: 24,
@@ -21,8 +22,8 @@ const style = {
 function Experience() {
   const [visibleStates, setVisibleStates] = useState<boolean[]>([]);
   const [open, setOpen] = useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const [open2, setOpen2] = useState(false);
+  const [open3, setOpen3] = useState(false);
   const elementRefs = useRef<RefObject[]>([]);
 
   const handleIntersection = (
@@ -83,11 +84,17 @@ function Experience() {
           >
             <div className="text_container_exp">
               <p className="title_text_exp">
-                worked as a Full Stack Developer,{" "}
-                <span onClick={handleOpen}>Know More</span>
+                worked as a Full Stack Developer,
+                <span
+                  onClick={() => {
+                    setOpen(true);
+                  }}
+                >
+                  Know More
+                </span>
                 <Modal
                   open={open}
-                  onClose={handleClose}
+                  onClose={() => setOpen(false)}
                   aria-labelledby="modal-modal-title"
                   aria-describedby="modal-modal-description"
                 >
@@ -97,11 +104,14 @@ function Experience() {
                       variant="h6"
                       component="h2"
                     >
-                      Text in a modal
+                      About CDN Solutuons
                     </Typography>
                     <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                      Duis mollis, est non commodo luctus, nisi erat porttitor
-                      ligula.
+                      CDN Software Solutions is the division of CDN Solutions
+                      Group that offers transformational software solutions to
+                      cater custom needs of businesses spanning various
+                      continents/geographical locations - North America, South
+                      America, Asia, Europe, and Australia.
                     </Typography>
                   </Box>
                 </Modal>
@@ -124,9 +134,6 @@ function Experience() {
                 visibleStates[1] ? "animate__animated animate__backInRight" : ""
               }`}
             >
-              <div className="know_landing">
-                <button>Know More</button>
-              </div>
               <img src="/download (1).png" alt="image" />
             </div>
           </div>
@@ -155,11 +162,11 @@ function Experience() {
           >
             <div className="text_container_exp">
               <p className="title_text_exp">
-                worked as a Full Stack Developer Intern,{" "}
-                <span onClick={handleOpen}>Know More</span>
+                worked as a Full Stack Developer Intern,
+                <span onClick={() => setOpen2(true)}>Know More</span>
                 <Modal
-                  open={open}
-                  onClose={handleClose}
+                  open={open2}
+                  onClose={() => setOpen2(false)}
                   aria-labelledby="modal-modal-title"
                   aria-describedby="modal-modal-description"
                 >
@@ -169,11 +176,14 @@ function Experience() {
                       variant="h6"
                       component="h2"
                     >
-                      Text in a modal
+                      About Mavoix Solutions
                     </Typography>
                     <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                      Duis mollis, est non commodo luctus, nisi erat porttitor
-                      ligula.
+                      Mavoix Solution, a Bangalore-based startup, specializes in
+                      robotics, IoT, and AI/ML innovations. Focused on
+                      cutting-edge technology, it delivers transformative
+                      solutions across industries, blending automation and
+                      intelligence to drive efficiency and innovation.
                     </Typography>
                   </Box>
                 </Modal>
@@ -201,11 +211,11 @@ function Experience() {
           >
             <div className="text_container_exp">
               <p className="title_text_exp">
-                worked as a Node.js Developer Intern,{" "}
-                <span onClick={handleOpen}>Know More</span>
+                worked as a Node.js Developer Intern,
+                <span onClick={() => setOpen3(true)}>Know More</span>
                 <Modal
-                  open={open}
-                  onClose={handleClose}
+                  open={open3}
+                  onClose={() => setOpen3(false)}
                   aria-labelledby="modal-modal-title"
                   aria-describedby="modal-modal-description"
                 >
@@ -215,11 +225,15 @@ function Experience() {
                       variant="h6"
                       component="h2"
                     >
-                      Text in a modal
+                      About Techpand Solutions
                     </Typography>
                     <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                      Duis mollis, est non commodo luctus, nisi erat porttitor
-                      ligula.
+                      TechPanda IT Services delivers innovative digital
+                      solutions, specializing in software development, IT
+                      consulting, and cloud services. With a customer-centric
+                      approach, TechPanda empowers businesses with scalable
+                      technology, driving growth and operational efficiency
+                      through cutting-edge tools and expertise.
                     </Typography>
                   </Box>
                 </Modal>
@@ -240,10 +254,6 @@ function Experience() {
                 visibleStates[5] ? "animate__animated animate__backInRight" : ""
               }`}
             >
-              <div className="know_landing">
-                <button>Know More</button>
-              </div>
-
               <img src="/downloadt.png" alt="image" />
             </div>
           </div>

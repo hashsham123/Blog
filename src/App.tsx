@@ -4,6 +4,7 @@ import "./App.css";
 import "animate.css";
 import { Link } from "react-scroll";
 import Contacts from "./components/contacts/Contacts";
+import EmailContact from "./components/contacts/EmailContact.js";
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
         </Link>
       </div>
       <Home />
-      <Contacts/>
+      <EmailContact />
+      <Contacts />
     </div>
   );
 }

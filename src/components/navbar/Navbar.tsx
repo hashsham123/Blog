@@ -22,7 +22,7 @@ interface Props {
 }
 
 const drawerWidth = 240;
-const navItems = ["Experience", "Projects", "Certificates", "Contacts"];
+const navItems = ["Introduction", "Experience", "Projects", "Certificates", "Contacts"];
 
 export default function Navbar(props: Props) {
   const { window } = props;
@@ -112,7 +112,7 @@ export default function Navbar(props: Props) {
             keepMounted: true,
           }}
           sx={{
-            display: { xs: "block", sm: "none" }, // Show drawer on small screens
+            display: { xs: "block", sm: "none" }, 
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: drawerWidth,
