@@ -1,5 +1,9 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import "../../styles/LandingPage.scss";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const frames = [
   "frames/scene00011.png",
@@ -9,13 +13,23 @@ const frames = [
   "frames/scene00015.png",
   "frames/scene00016.png",
   "frames/scene00017.png",
+  "frames/scene00018.png",
+  "frames/scene00019.png",
+  "frames/scene00020.png",
+  "frames/scene00021.png",
   "frames/scene00022.png",
   "frames/scene00023.png",
   "frames/scene00024.png",
+  "frames/scene00025.png",
+  "frames/scene00026.png",
+  "frames/scene00027.png",
   "frames/scene00028.png",
   "frames/scene00029.png",
   "frames/scene00030.png",
   "frames/scene00031.png",
+  "frames/scene00032.png",
+  "frames/scene00033.png",
+  "frames/scene00034.png",
   "frames/scene00035.png",
   "frames/scene00036.png",
   "frames/scene00037.png",
@@ -28,63 +42,66 @@ const frames = [
 
 const LandingPage: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const [currentFrame, setCurrentFrame] = useState<number>(0);
-  const [imageCache, setImageCache] = useState<HTMLImageElement[]>([]);
+  const imageCache = useRef<Map<number, HTMLImageElement>>(new Map());
+  const animationFrame = useRef<number>(0);
 
+  // Preload images and store them in a cache
   const preloadImages = () => {
-    const cache: HTMLImageElement[] = [];
     frames.forEach((frame, index) => {
       const img = new Image();
       img.src = `/${frame}`;
       img.onload = () => {
-        cache[index] = img;
-        setImageCache([...cache]);
+        imageCache.current.set(index, img);
       };
     });
   };
 
-  const handleScroll = () => {
-    const scrollTop = window.pageYOffset;
-    const maxScroll =
-      document.documentElement.scrollHeight - window.innerHeight;
+  const renderFrame = (frameIndex: number) => {
+    const canvas = canvasRef.current;
+    const ctx = canvas?.getContext("2d");
+    const img = imageCache.current.get(frameIndex);
 
-    const scrollPercentage = scrollTop / maxScroll;
+    if (canvas && ctx && img) {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
 
-    const frameIndex = Math.min(
-      Math.floor(scrollPercentage * (frames.length - 1)),
-      frames.length - 1
-    );
-    setCurrentFrame(frameIndex);
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+    }
   };
 
   useEffect(() => {
     preloadImages();
-  }, []);
 
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    const ctx = canvas?.getContext("2d");
+    const totalFrames = frames.length - 1;
 
-    if (canvas && ctx && imageCache[currentFrame]) {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+    // GSAP ScrollTrigger
+    gsap.to(animationFrame, {
+      current: totalFrames,
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".main_frame",
+        start: "top top",
+        end: "bottom bottom",
+        scrub: 1,
+        onUpdate: (self) => {
+          const frameIndex = Math.min(
+            Math.floor(self.progress * totalFrames),
+            totalFrames
+          );
+          renderFrame(frameIndex);
+        },
+      },
+    });
 
-      const img = imageCache[currentFrame];
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-    }
-  }, [currentFrame, imageCache]);
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      ScrollTrigger.killAll(); // Clean up ScrollTrigger on unmount
     };
   }, []);
 
   return (
     <div>
-      <div className="main_frame">
+      <div className="main_frame" style={{ height: "200vh" }}>
         <canvas className="canvas" ref={canvasRef} />
       </div>
     </div>
