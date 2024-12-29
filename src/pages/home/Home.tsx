@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Experience from "../../components/experiences/Experience";
 import LandingPage from "../../components/lading_page/LandingPage";
 import Projects from "../../components/projects/Projects";
