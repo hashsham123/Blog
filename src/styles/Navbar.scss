@@ -1,6 +1,6 @@
 @media (max-width: 851px) {
   .MuiToolbar-root {
-    padding: 1rem !important;
+    padding: 0rem 1rem !important;
   }
 }
 
@@ -37,4 +37,8 @@
 .button_nav {
   height: 4rem;
   width: 7rem;
+}
+
+.port-responsive-logo {
+  height: 7rem;
 }

@@ -22,7 +22,13 @@ interface Props {
 }
 
 const drawerWidth = 240;
-const navItems = ["Introduction", "Experience", "Projects", "Certificates", "Contacts"];
+const navItems = [
+  "Introduction",
+  "Experience",
+  "Projects",
+  "Certificates",
+  "Contacts",
+];
 
 export default function Navbar(props: Props) {
   const { window } = props;
@@ -33,9 +39,9 @@ export default function Navbar(props: Props) {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center", height: "1.5rem" }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        <img src="/logo" alt="image" />
+        <img className="port-responsive-logo" src="/logo.png" alt="image" />
       </Typography>
       <Divider />
       <List>
@@ -54,7 +60,9 @@ export default function Navbar(props: Props) {
           </ListItem>
         ))}
       </List>
-      <Button variant="outlined">Download Resume</Button>
+      <Button className="port-nav-button" variant="contained">
+        <DownloadIcon /> Resume
+      </Button>{" "}
     </Box>
   );
 
@@ -112,7 +120,7 @@ export default function Navbar(props: Props) {
             keepMounted: true,
           }}
           sx={{
-            display: { xs: "block", sm: "none" }, 
+            display: { xs: "block", sm: "none" },
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: drawerWidth,
