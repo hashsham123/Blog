@@ -75,7 +75,6 @@ const LandingPage: React.FC = () => {
 
     const totalFrames = frames.length - 1;
 
-    // GSAP ScrollTrigger
     gsap.to(animationFrame, {
       current: totalFrames,
       ease: "none",
@@ -101,7 +100,7 @@ const LandingPage: React.FC = () => {
 
   return (
     <div>
-      <div className="main_frame" style={{ height: "200vh" }}>
+      <div className="main_frame" style={{ height: "700vh" }}>
         <canvas className="canvas" ref={canvasRef} />
       </div>
     </div>
