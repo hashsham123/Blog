@@ -32,7 +32,7 @@ function Contact() {
     },
   });
 
-  const sendEmail = (values: any, resetForm: () => void) => {
+  const sendEmail = (_values: any, resetForm: () => void) => {
     if (!form.current) return;
 
     emailjs
