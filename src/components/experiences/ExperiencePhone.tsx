@@ -86,7 +86,7 @@ function ExperiencePhone() {
             <div className="box_img_exp">
               <div
                 ref={(el) => setRef(el, 1)}
-                className={`img_exp ${
+                className={` ${
                   visibleStates[1]
                     ? "animate__animated animate__backInRight"
                     : ""
@@ -146,7 +146,7 @@ function ExperiencePhone() {
           <div className="box_img_exp">
             <div
               ref={(el) => setRef(el, 2)}
-              className={`img_exp ${
+              className={` ${
                 visibleStates[2] ? "animate__animated animate__backInLeft" : ""
               }`}
             >
@@ -215,7 +215,7 @@ function ExperiencePhone() {
             <div className="box_img_exp">
               <div
                 ref={(el) => setRef(el, 5)}
-                className={`img_exp ${
+                className={` ${
                   visibleStates[5]
                     ? "animate__animated animate__backInRight"
                     : ""
